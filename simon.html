@@ -1,28 +1,35 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simon Game/</title>
+    <title>Simon Game | Memory Challenge</title>
     <link rel="stylesheet" href="simon.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Test your memory with the classic Simon Says game. Watch the sequence and repeat it to advance through levels.">
 </head>
 
 <body>
-    <h1>Simon Says Game</h1>
-    <H2>press any key to start the Game</H2>
-    <div class="btn-container">
-        <div class="line-one">
-            <div class="btn red " type="button" id="red">1</div>
-            <div class="btn yellow" type="button" id="yellow">2</div>
-        </div>
-        <div class="line-two">
-            <div class="btn green"type="button" id="green">3</div>
-            <div class="btn purple"type="button" id="purple">4</div>
-        </div>
-
-
-    </div>
+    <main class="game-container">
+        <header class="game-header">
+            <h1>Simon Says</h1>
+            <h2 id="game-status">Press any key to start the game</h2>
+        </header>
+        
+        <section class="game-board">
+            <div class="btn-container" role="grid" aria-label="Simon game buttons">
+                <div class="line-one" role="row">
+                    <button class="btn red" type="button" id="red" aria-label="Red button" data-color="red"></button>
+                    <button class="btn yellow" type="button" id="yellow" aria-label="Yellow button" data-color="yellow"></button>
+                </div>
+                <div class="line-two" role="row">
+                    <button class="btn green" type="button" id="green" aria-label="Green button" data-color="green"></button>
+                    <button class="btn purple" type="button" id="purple" aria-label="Purple button" data-color="purple"></button>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="simon.js"></script>
 

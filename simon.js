@@ -51,16 +51,20 @@ function checkAns(idx) {
             setTimeout(levelUp, 1000);
         }
     } else {
+        // Wrong sequence - show error effect
+        document.body.style.background = "linear-gradient(135deg, #ff4757, #c44569)";
+        document.body.style.transition = "background 0.3s ease";
+        
         // Update high score if current level is higher
         if (level > highScore) {
             highScore = level;
         }
 
         h2.innerHTML = `Game Over! Your Score: <b>${level}</b><br>High Score: <b>${highScore}</b><br>Press any key to restart.`;
-        document.querySelector("body").style.backgroundColor = "red";
+        
         setTimeout(function () {
-            document.querySelector("body").style.backgroundColor = "white";
-        }, 150);
+            document.body.style.background = "linear-gradient(135deg, #667eea, #764ba2)";
+        }, 1000);
         reset();
     }
 }
